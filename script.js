@@ -7,4 +7,6 @@ function getComputerChoice(items) {
   return items[random];
     
 }
-console.log(getComputerChoice(items))
+ let getHumanChoice =  prompt ('Rock Paper or Scissors?')
+
+ 
