@@ -13,28 +13,31 @@ const computerSelection = computerChoice();
 
 
 function playerChoice() {
-  let humanChoice = prompt('rock, paper or scissors?');
   let input = prompt ('select rock, paper or scissors')
   while (input == null){
-    input = promt (' select rock, paper or scissors')
+    input = prompt (' select rock, paper or scissors')
   }
   input = input.toLowerCase();
-  let check = validateInput(input)
-  if (check == true){
-    console.log(input);
+  let check = validateInput(input);
+  while (check == false){
+   input = prompt( 
+    'select rock, paper or scissors: double check spelling, capitalisation does not matter'
+  );
+    while (input == null){
+      input = prompt (' select rock, paper or scissors');
+    }
+    input = input.toLowerCase();
+    check = validateInput(input);
   }
-}  
+} 
+
 
 function computerChoice() {
     return choices[Math.floor(Math.random()*choices.length)];
 }
 
 function validateInput(choice) {
-  if (choices.includes(choice)){
-    return true;
-}
-{
-  return false;
+  return choices.includes(choice);
 }
 
 
