@@ -1,12 +1,30 @@
-console.log('Hello World!')
 
-const items =  ['Rock','Paper','Scissors']
+const choices = ["rock", "paper", "scissors"];
 
-function getComputerChoice(items) {
-    const random = Math.floor(Math.random()*items.length);
-  return items[random];
-    
+let humanScore = 0
+let computerScore = 0
+let turns = 0
+
+const playRound()
+
+function getComputerChoice() {
+    return choices[Math.floor(Math.random()*choices.length)];
 }
- let getHumanChoice =  prompt ('Rock Paper or Scissors?')
 
- 
+function getHumanChoice() {
+let humanChoice = prompt('rock, paper or scissors?');
+
+}
+let humanScore = 0
+let computerScore = 0
+
+function playRound(humanChoice, computerChoice){
+
+  if (humanChoice === computerChoice){
+    console.log('Draw Game! Both' + `${humanChoice}`)
+  }
+  if (humanChoice = 'paper', computerChoice = 'rock'){
+    console.log('Player wins! Paper beats Rock')
+    if (humanChoice = 'scissors')
+  }
+}
