@@ -3,7 +3,7 @@ const winners = [];
 
 function game(){
   playRound();
-  for (let i = 0; i < 4; i++){
+  for (let i = 1; i <=5; i++){
     playRound(i);
   }
   logWins();
@@ -71,10 +71,11 @@ function logWins() {
     console.log('Computer Wins', computerWins);
     console.log('Draw', ties)
 }
-function logRound(playerChoice, computerChoice,winner){
-  console.log('Round:', logRound);
+function logRound(playerChoice, computerChoice,winner,round){
+  console.log('Round:', round);
   console.log('Player choice:',playerChoice);
   console.log('Computer choice:', computerChoice);
   console.log(winner, 'Won the round');
+  console.log('----------------------------------');
 }
 game();
