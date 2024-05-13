@@ -7,6 +7,10 @@ function game(){
 function playRound() {
 const playerSelection = playerChoice();
 const computerSelection = computerChoice();
+const winner = checkWinner (playerSelection,computerSelection);
+console.log(computerSelection)
+console.log(playerSelection)
+console.log(winner)
 }
 
 
@@ -29,6 +33,7 @@ function playerChoice() {
     input = input.toLowerCase();
     check = validateInput(input);
   }
+  return input
 } 
 
 
@@ -38,6 +43,18 @@ function computerChoice() {
 
 function validateInput(choice) {
   return choices.includes(choice);
+}
+
+function checkWinner(choiceP, choiceC){
+  if (choiceP === choiceC){
+    return 'Its a Draw!';
+  } else if ((choiceP === 'scissors' && choiceC === 'paper') 
+    || (choiceP === 'paper' && choiceC === 'rock')
+    ||(choiceP === 'rock' && choiceC === 'scissors')){
+    return 'Player wins the round!';
+  }else {
+    return ('Computer wins the round!')
+  }
 }
 
 
